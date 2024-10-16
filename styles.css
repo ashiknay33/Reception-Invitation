@@ -1,0 +1,60 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('https://i.pinimg.com/originals/da/e1/c1/dae1c11aa1d72da7e9286c0a79b66a76.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: cursive;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Invitation Card Container */
+.invitation-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Content Styling */
+.content h1 {
+    font-size: 48px;
+    font-style: italic;
+    font-family: "Lucida Handwriting", cursive;
+    margin: 0;
+}
+
+.content h1 span {
+    color: #ff4081;
+}
+
+.content .date, .content .venue, .content .lunch, .content .location, .content .quote {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.content .quote {
+    font-size: 24px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.countdown p {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+#countdown span {
+    font-size: 32px;
+    margin: 0 5px;
+    color: #ff4081;
+}
+
