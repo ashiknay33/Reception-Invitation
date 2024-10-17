@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sshagent([SSH_CREDENTIALS]) {
-                    sh '''scp -o StrictHostKeyChecking=no index.html ububtu@${EC2_IP}:${REMOTE_DIR}'''
+                    sh '''scp -o StrictHostKeyChecking=no index.html ubuntu@${EC2_IP}:${REMOTE_DIR}'''
                 }
             }
         }
