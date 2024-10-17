@@ -2,7 +2,7 @@ pipeline {
     agent any
 
         environment {
-        EC2_IP = '54.224.111.208'
+        EC2_IP = '3.86.67.65'
         SSH_CREDENTIALS = 'ec2-ssh-credentials'
         REMOTE_DIR = '/var/www/html/'
     }
