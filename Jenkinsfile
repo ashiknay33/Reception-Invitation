@@ -17,22 +17,14 @@ pipeline {
                 sshagent([SSH_CREDENTIALS]) {
                     // Copy the file to /tmp first
                     sh """
-                    scp -o StrictHostKeyChecking=no index.html ubuntu@${EC2_IP}:/tmp/index.html
+                    scp -o StrictHostKeyChecking=no index.html ubuntu@${EC2_IP}:index.html
                     """
                     // Use ssh to move the file to /var/www/html with sudo
                     sh """
-                    ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} 'sudo mv /tmp/index.html ${REMOTE_DIR}'
+                    ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} 'sudo mv index.html ${REMOTE_DIR}'
                     """
                 }
             }
         }
     }
-    }
- post {
-        success {
-            echo 'Deployment successful!'
-        }
-        failure {
-            echo 'Deployment failed.'
-        }
     }
