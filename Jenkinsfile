@@ -29,4 +29,3 @@ pipeline {
             echo 'Deployment failed.'
         }
     }
-}
