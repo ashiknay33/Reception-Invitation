@@ -15,9 +15,9 @@ pipeline {
                 stage('Deploy to EC2') {
             steps {
                 sshagent([SSH_CREDENTIALS]) {
-                    // Copy the file to /tmp first
+                    // Copy the file first
                     sh """
-                    scp -o StrictHostKeyChecking=no index.html styles.css ubuntu@${EC2_IP}:index.html
+                    scp -o StrictHostKeyChecking=no index.html styles.css ubuntu@${EC2_IP}:/home/ubuntu
                     """
                     // Use ssh to move the file to /var/www/html with sudo
                     sh """
