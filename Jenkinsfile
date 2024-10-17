@@ -9,7 +9,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sshagent(['ec2-ssh-credentials']) {
-                    sh '''scp -o StrictHostKeyChecking=no index.html ec2-user@3.91.235.155:/var/www/html/index.html'''
+                    sh '''scp -o StrictHostKeyChecking=no index.html ubuntu@54.224.111.208:/var/www/html/index.html'''
                 }
             }
         }
